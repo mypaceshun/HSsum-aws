@@ -1,0 +1,24 @@
+[tool.poetry]
+name = "dynamodb"
+version = "0.1.0"
+description = "connect dynamodb"
+authors = ["KAWAI Shun <shun@osstech.co.jp>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+boto3 = "^1.14.50"
+python-dotenv = "^0.14.0"
+
+[tool.poetry.dev-dependencies]
+flake8 = "^3.8.3"
+
+[tool.poetry.scripts]
+scan = "dynamodb.main:scan"
+get = "dynamodb.main:get"
+add = "dynamodb.main:add"
+delete = "dynamodb.main:delete"
+
+[build-system]
+requires = ["poetry>=0.12"]
+build-backend = "poetry.masonry.api"
